@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:randomnum_genr/pages/result_page.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -65,7 +66,14 @@ class _HomepageState extends State<Homepage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const Result(),
+            ),
+          );
+        },
         child: const Icon(Icons.arrow_right_alt),
       ),
     );
